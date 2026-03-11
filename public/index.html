@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <!-- 独自のCSSファイルを読み込み -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <!-- 左サイドバー (固定) -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <a href="#" class="sidebar-home" data-tab="home">
+            <span class="ri-home-line"></span>
+            <span>Home</span>
+          </a>
+        </div>
+
+        <!-- サイドバーにメニューを追加してください -->
+        <ul>
+          <li class="sidebar-menu-item tab-item" data-tab="converter">
+            Unit Converter
+          </li>
+        </ul>
+      </aside>
+
+      <!-- 右メインコンテンツ (スクロール可) -->
+      <main class="main-content">
+        <!-- ホームセクション -->
+        <section class="content-section" id="home">
+          <header class="section-header">
+            <div class="profile-circle">
+              <span class="ri-user-smile-line"></span>
+            </div>
+            <h1 class="section-title">Welcome to Your Personal Dashboard</h1>
+            <p class="section-subtitle">
+              Make your daily life more convenient and enjoyable
+            </p>
+          </header>
+          <div class="section-body">
+            <div class="section-description">
+              <p>
+                This dashboard is a tool to enrich your daily life. You can
+                easily use essential features such as diary entries, memo
+                management, and checking weather information.
+              </p>
+              <p>
+                Small daily records become irreplaceable memories, and efficient
+                task management leads to fulfilling days. Please use this as a
+                partner that supports your everyday life.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- End ホームセクション -->
+        <section class="content-section hidden" id="converter">
+          <div class="section-header">
+            <h2 class="section-title">Length Unit Conversion</h2>
+          </div>
+
+          <div class="section-body">
+            <form class="converter-form">
+              <input type="number" class="converter-input" value="1000" />
+
+              <select class="converter-from">
+                <option value="meter">meter</option>
+                <option value="kilometer">kilometer</option>
+              </select>
+
+              <span> to </span>
+
+              <select class="converter-to">
+                <option value="meter">meter</option>
+                <option value="kilometer">kilometer</option>
+              </select>
+
+              <div class="converter-result"></div>
+              <div class="error-message"></div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
